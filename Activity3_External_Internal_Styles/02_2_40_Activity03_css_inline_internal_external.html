@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./coms319_style/style_tutorials.css">
+    <title>Activity03 CSS: Cascading Style Sheets</title>
+</head>
+
+<body>
+    <p>SE/ComS3190 Construction of User Interfaces</p>
+    <h1 style = "font-size: 30px;">Activity03 In-class.</h1>
+    <h1 style = "font-size: 50px;">How CSS is applied to HTML</h1>
+
+    <p>At the top of the <code>body</code> section in the HTML add your student data:</p>
+    <div style="background-color: rgba(255, 166, 0, 0.085); ">
+        <pre><code>
+&lt;p&gt;Student name : name&lt;/p&gt;
+&lt;p&gt;email : NetId@iastate.edu&lt;/p&gt;
+&lt;p&gt;date : September 04, 2024&lt;/p&gt;
+        </pre></code>
+    </div>
+
+    <p>Create a file named <code>netid_Activity03.html</code>, and also create other file named <code>netid_Activity03.css</code>.</p>
+    <div>
+
+        <p>CSS can be applied to HTML by the next three forms : </p>
+
+        <ul style="list-style: none;">
+            <li><span style="font-size:25px; font-weight: bold;">External stylesheet:</span> The External Stylesheet is a separated file with extension <code>.css</code> and is linked to the actual HTML file.</li>
+            <li><span style="font-size:25px; font-weight: bold;">Internal stylesheet:</span> The CSS Internal Stylesheet is a section of code within an HTML document. It is not necessary write an external file <code>.css</code> and it is not required add a link into the section <code> &lt;head&gt;...&lt;/head&gt;</code>.</li>
+            <li><span style="font-size:25px; font-weight: bold;">Inline styles:</span> The CSS Inline Style is used to apply a unique style to a single HTML element.</li>
+        </ul>
+        
+    </div>
+
+    <!-- ********************************************************* -->
+    <!--                   EXTERNAL stylesheet                     -->
+    <!-- ********************************************************* -->
+
+    <div>
+        <h1 class="h1color">1) External Stylesheet</h1>
+
+        <p>The External Stylesheet is a separated file with extension <code>.css</code> and is linked to the actual HTML file.</p>
+        <p>The content of the <code>.css</code> file make references to the HTML via <code>tags, classes or ids</code> then the appearance of the Web page is improve it. </p>
+        <h3>The advantages to use an external stylesheet document per each HTML document are the next : </h3>
+            
+        <ul>
+            <li>The same <code>.css</code> file can be linked to different HTML Web pages if necessary. </li>
+            <li>It is easy to maintain your html page.</li>
+            <li>Change and Look process is simplified.</li>
+            <li>HTML Web pages are shorter. Then <code>.css</code> file is cached on the browser side, so the Internet traffic is reduced.</li>
+        </ul>
+
+        <p>We must include a link in our HTML code. The link to the <code>.css</code> External Stylesheet is as follows : </p>
+
+        <div class="divcodecolor">
+            <pre style="margin-left: -80px"><code>
+                &lt;link rel="stylesheet" href="namefile.css" &gt;
+            </code></pre>
+        </div>
+
+        <p>Where <code style="font-weight:bold;">namefile.css</code> is the name of the External Stylesheet. If the file is in different path or folder from the actual HTML file we must include it in the file name.</p>
+
+        <!-- EXAMPE OF EXTERNAL CSS -->
+        <!-- ********************************************************* -->
+
+        <p>Start writing a HTML file named <code style="font-weight:bold;">netid_Activity03.html</code> such as the next code :</p>
+
+        <div class="divcodecolor">
+            <pre style="margin-left: -80px"><code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="en"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Activity03 CSS: External, Internal and Inline stylesheet&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h3&gt;1) External Stylesheet&lt;/h3&gt;
+                    &lt;hr&gt;
+
+                    &lt;h1&gt;This is one example to show CSS External Stylesheet .&lt;/h1&gt;
+                    &lt;p&gt;This is p paragraph to improve appearance using CSS External Stylesheet CSS.&lt;/p&gt;
+
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code></pre>
+        </div>
+        <!-- END -->
+        <!-- ********************************************************* -->
+
+        <p>Observe that in the section <code> &lt;head&gt;&lt;/head&gt;</code> there is not a <code>link</code> to any external file. And the result of this Web page is the next :</p>
+
+        <p><code style="font-weight:bold;">netid_Activity03.html</code> </p>
+        <div class="iframetutorial">
+            <iframe src="./02_2_41_css_external_1.html" style="width:100%; height:300px;"></iframe>
+        </div>
+
+        <p>However, we want to improve the text in <strong><code>h1</code></strong> and in <strong><code>p</code></strong> elements. Then, we create an <strong>EXTERNAL</strong> file <code style="font-weight:bold;">netid_Activity03.css</code></p>
+
+        <p>The code that we are going to include in the external file is the next :</p>
+
+        <p><code style="font-weight:bold;">netid_Activity03.css</code> </p>
+        <div class="divcodecolor">
+            <pre style="margin-left: -100px"><code>
+                body {
+                    background-color: #f8f9fa; 
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    color: #333;
+                }
+                
+                h1 {
+                    font-size: 2.5em;
+                    color: #007bff;
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+                
+                p {
+                    font-size: 1.2em;
+                    color: #444;
+                    line-height: 1.6;
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                    text-align: center;
+                }
+            </code></pre>
+        </div>
+
+        <p>And we add the next link in the <code> &lt;head&gt;&lt;/head&gt;</code> section to make reference to the <code>.css</code> file : </p>
+
+        <p>The code that we are going to include in the external file is the next :</p>
+
+        <div class="divcodecolor">
+            <pre style="margin-left: -100px"><code>
+                &lt;link rel="stylesheet" href="netid_Activity03.css"&gt;
+            </code></pre>
+        </div>
+
+        <p>The final Web page resulting is the next :</p>
+
+        <div class="iframetutorial">
+            <iframe src="./02_2_41_css_external_2.html" style="width:100%; height:300px;"></iframe>
+        </div>
+
+        
+        <!-- Exercise of EXTERNAL CSS                                  -->
+        <!-- ********************************************************* -->
+        <br><br>
+        <h2>Adding <code>Selector class</code> to CSS Stylesheet External file.</h2>
+        <p>Modify the HTML file with the next changes :</p>
+
+        <ul>
+            <li>Copy the text in <code>h1</code> and <code>p</code> to the same <code>&lt;body&gt;...&lt;/body&gt;</code> section so we have twice the same text. </li>
+            <li>And add CSS inline <code>class</code> to every new element, as shown in the next code :</li>
+        </ul>
+
+            <div class="divcodecolor">
+                <pre style="margin-left: -80px"><code>
+                &lt;body&gt;
+                
+                    &lt;h1 class="myh1class"&gt;Example to show CSS External Stylesheet using CSS Selector class.&lt;/h1&gt;
+                    &lt;p class="mypclass"&gt;Paragraph using CSS External Stylesheet using CSS Selector class.&lt;/p&gt;
+                
+                &lt;/body&gt;
+                </code></pre>
+            </div>
+
+        <p>Modify the CSS file to have the next changes :</p>
+        <ul>
+            <li>For the second set of <code>h1</code> and <code>p</code> do the next changes : </li>
+            <li style="list-style: none;">
+                <p>For the tag <strong><code>h1</code></strong> create the <code>class="myh1class" </code>:</p>
+                <ul>
+                    <li>Change font color : </li>
+                    <li style="list-style: none;"> <br>
+                        <code>
+                        .myh1class{ <br>
+                            color: #063b74; <br>
+                          }</code>
+                    </li>
+                </ul>
+            </li>
+            <li style="list-style: none;">
+                <p>For the tag <strong><code>p</code></strong> create the <code>class="mypclass"</code>:</p>
+                <ul>
+                    <li>Change font color : </li>
+                    <li style="list-style: none;"> <br>
+                        <code>
+                        .mypclass{ <br>
+                            color: #cd0505; <br>
+                            }</code>
+                    </li>
+                </ul>
+            </li>
+            <li><p>Any other change to this second set of <code>h1</code> and <code>p</code> is welcome, practice!</p></li>
+        </ul>
+
+
+        <h3>The Web page containing the two sets of <code>h1</code> and <code>p</code> and using CSS External Stylesheet is the next :</h3>
+
+        <div class="iframetutorial">
+            <iframe src="./02_2_41_css_external_3.html" style="width:100%; height:300px;"></iframe>
+        </div>
+
+
+    </div>
+    <!-- End EXTERNAL stylesheet -->
+    
+
+
+
+    <!-- ********************************************************* -->
+    <!--                   INTERNAL stylesheet                     -->
+    <!-- ********************************************************* -->
+
+    <!-- INTERNAL stylesheet -->
+    <br><br>
+    <div>
+        <h1 class="h1color">2) Internal Stylesheet</h1>
+
+        <p>The CSS Internal Stylesheet is a section of code within an HTML document. It is not necessary write an external file <code>.css</code> and it is not required add a link into the section <code> &lt;head&gt;...&lt;/head&gt;</code>. </p>
+
+        <p>Let's write a HTML code including a CSS Internal Stylesheet. </p>
+
+
+        <!-- EXAMPE OF INTERNAL CSS -->
+        <!-- ********************************************************* -->
+
+        <p>The next code is a CSS Internal Stylesheet embedded in the <code>&lt;head&gt;...&lt;/head&gt;</code> section.</p>
+        <div class="divcodecolor">
+            <pre style="margin-left: -100px"><code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                &lt;head&gt;
+                   &lt;style&gt;
+
+                      h2 {
+                        color: whitesmoke;
+                        background-color: brown;
+                        font-family: cursive
+                      }
+
+                   &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+
+                    &lt;h3&gt;1) External Stylesheet&lt;/h3&gt;
+                    &lt;hr&gt;
+
+                    &lt;h1&gt;This is one example to show CSS External Stylesheet .&lt;/h1&gt;
+                    &lt;p&gt;This is p paragraph to improve appearance using CSS External Stylesheet CSS.&lt;/p&gt;
+                
+                    &lt;h1 class="myh1class"&gt;This is one example to show CSS External Stylesheet .&lt;/h1&gt;
+                    &lt;p class="mypclass"&gt;This is p paragraph to improve appearance using CSS External Stylesheet CSS.&lt;/p&gt;
+
+                    &lt;h3&gt;2) Internal Stylesheet&lt;/h3&gt;
+                    &lt;hr&gt;
+
+                    &lt;h2&gt;This is one example to show CSS Internal stylesheet. &lt;/h2&gt;
+
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code></pre>
+        </div>
+        <!-- END -->
+        <!-- ********************************************************* -->
+
+        <p>Observe that the <code>.css</code> code is written directly inside the HTML document for improving the text of a tag <code>h2</code>. </p>
+
+        <h3>The Internal Stylesheet has the next inconvenients :</h3>
+        <ul>
+            <li>If the <code>.css</code> code is extense, all the code will increase the size of the HTML document and its maintenance will become complex.</li>
+            <li>The <code>.css</code> is useful only in the actual document. If we need the same work in different HTML document, all <code>.css</code> has to be copied to the new HTML.</li>
+        </ul>
+
+        <p>Add the text between tags <code>&lt;h2&gt; ... &lt;/h2&gt;</code> and the CSS Internal stylesheet to the <strong><code>nedid_Activity03.html</code></strong> file. </p>
+
+    </div>
+    <!-- END INTERNAL stylesheet -->
+
+
+    <!-- ********************************************************* -->
+    <!--                   Accumulated so far                      -->
+    <!-- ********************************************************* -->
+    <br>
+    <div>
+        <h3>The HTML constructed so far is the next :</h3>
+        <p>The <code>netid_Activity03.html</code> so far is as follows :</p>
+
+        <div class="iframetutorial">
+            <iframe src="./02_2_42_css_internal_sofar.html" style="width:100%; height:450px;"></iframe>
+        </div>
+    </div>
+
+
+    <!-- ********************************************************* -->
+    <!--                   INLINE style                            -->
+    <!-- ********************************************************* -->
+
+    <!-- INLINE STYLE -->
+    <br><br>
+    <div>
+
+        <h1 class="h1color">3) Inline Style</h1>
+
+        <p>The CSS Inline Style is used to apply a unique style to a single HTML element. </p>
+
+        <p>The following example sets the text color of the <code> &lt;h1&gt;</code> element to blue, and the text color of the <code> &lt;p&gt;</code> element to red:</p>
+
+
+        <!-- Example -->
+        <!-- ********************************************************* -->
+        <div class="divcodecolor">
+            <pre style="margin-left: -80px"><code>
+                &lt;h3&gt; 3) inline Stylesheet &lt;/h3&gt;
+                &lt;h1 style="color:Green; background-color: transparent;"&gt;A Green Heading&lt;/h1&gt;
+
+                &lt;p style="color:purple;"&gt;A purple paragraph.&lt;/p&gt;
+            </code></pre>
+        </div>
+        <!-- END -->
+        <!-- ********************************************************* -->
+
+        <p>The <code> <span style="color:Green;">style</span><span style="color:Green;">="color:Green;"</span></code> will modify the appearance of the <code> &lt;h1&gt;</code> element in the HTML document.</p>
+
+        <p>And the <code> <span style="color:purple;">style</span><span style="color:purple;">="color:purple;"</span></code> will modify the appearance of the <code>&lt;p&gt;</code> element.</p>
+
+        <h3>Add the HTML of <code>h1</code> and <code>p</code> to your current <code>netid_Activity03.html</code> :</h3>
+
+
+        <h3>We can list several advantages of using Inline Style. However, it is more important to highly the inconvenients :</h3>
+        <ul>
+            <li>If the <code>.css</code> code is extense, all the code will increase the size of the HTML document and its maintenance will become complex.</li>
+            <li>The <code>.css</code> is useful only in the actual document. If we need the same work in different HTML document, all <code>.css</code> has to be copied to the new HTML.</li>
+        </ul>
+
+    </div>
+    <!-- END INLINE STYLE -->
+
+
+    <!-- ********************************************************* -->
+    <!--                   Accumulated Final                       -->
+    <!-- ********************************************************* -->
+    <br>
+    <div>
+        <h3>The final HTML constructed is the next :</h3>
+
+        <div class="iframetutorial">
+            <iframe src="./02_2_44_css_inline_internal_external_final.html" style="width:100%; height:600px;"></iframe>
+        </div>
+    </div>
+
+
+
+    <br><br>
+    <div>
+        <h1 class="h1color">Summary :</h1>
+
+        <p>CSS can be applied to HTML by the next three forms : </p>
+
+        <ul style="list-style-type: none;">
+            <li><span style="font-size:20px; font-weight: bold;">1) E</span>xternal stylesheet <br>
+            by using a <code> &lt;link&gt;</code> element to link to an external CSS file.</li>
+            <li><span style="font-size:20px; font-weight: bold;">2) I</span>nternal stylesheet <br>
+            by using a <code> &lt;style&gt;...&lt;/style&gt;</code> element in the <code> &lt;head&gt;...&lt;/head&gt;</code> section. </li>
+            <li><span style="font-size:20px; font-weight: bold;">3) I</span>nline styles <br>
+            by using the style attributes inside HTML elements. </li>
+        </ul>
+
+    </div>
+
+    <br><br>
+    <div>
+        <p><strong>References:</strong></p>
+        <ul style="list-style: none;">
+            <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured">https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured</a></li>
+        </ul>
+    </div>
+
+    <br>
+    <footer>
+        <p style="font-size:small;">
+            <span style="color: rgb(234,7,43); background-color:gainsboro;">Dr. Abraham Aldaco</span> <br> 
+            <span style="color: rgb(234,7,43);">Iowa State University, Fall 2024 </span>
+        </p>
+    </footer>
+
+</body>
+</html>

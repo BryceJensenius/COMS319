@@ -1,0 +1,37 @@
+/*
+    Bryce Jensenius
+    brycejen@iastate.edu
+    September 4th, 2024
+*/
+body {
+    background-color: #f8f9fa; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2em;
+    color: #444;
+    line-height: 1.6;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.testH1Class {
+    color: #063b74;
+}
+
+.testPClass {
+    color: #cd0505;
+}
