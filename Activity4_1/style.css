@@ -11,8 +11,9 @@ nav li {
 nav a {
     text-decoration: none;
     color: #fff;
-    border: 3px double #413d3d;
-    padding: 5px
+    border: 5px double #413d3d;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 img {
