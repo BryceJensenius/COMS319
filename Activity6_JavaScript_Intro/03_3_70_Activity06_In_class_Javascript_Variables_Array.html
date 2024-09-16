@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Activity06 In-Class Variables Arrays</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .task {
+            margin-bottom: 20px;
+        }
+        input {
+            display: block;
+            margin-top: 10px;
+            padding: 8px;
+            width: 100%;
+            max-width: 400px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 8px 12px;
+        }
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+            color: green;
+        }
+        .resultE {
+            margin-top: 10px;
+            font-weight: bold;
+            color: rgb(255, 0, 0);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Activity06 In-Class Variables Array</h1>
+    <h3>September 13th, 2024</h3>
+    <div><h1>Name</h1></div>
+    <div class="task"></div>
+        <p><strong>Task 0:</strong> Input : </p>
+        <input type="text" id="myname" placeholder="Enter your name">
+        <input type="text" id="myemail" placeholder="Enter your email">
+        <button onclick="runTask0()">Run Task</button>
+        <div class="result" id="task0Result"></div>
+    </div>
+
+    <div><h1>Variables</h1></div>
+
+    <div class="task">
+        <p><strong>Task 1:</strong> Create a variable <strong>let</strong> named <strong><code>x</code></strong> and assign it the value 10. Output <code>x</code> in the console log.</p>
+        <input type="text" id="task1Input" placeholder="Enter your code here">
+        <button onclick="runTask1()">Run Task</button>
+        <div class="result" id="task1Result"></div>
+        <div class="resultE" id="task1ResultE"></div>
+    </div>
+    <div class="task">
+        <p><strong>Task 2:</strong> Create a variable <strong>var</strong> named <strong><code>num</code></strong> and assign it the integer value input. Output <code>num</code> in the console log.</p>
+        <input type="text" id="task7Input" placeholder="Enter integer value here">
+        <button onclick="runTask7()">Run Task</button>
+        <div class="result" id="task7Result"></div>
+        <div class="resultE" id="task7ResultE"></div>
+    </div>
+
+    <div class="task">
+        <p><strong>Task 3:</strong> Create a variable named <strong><code>anything</code></strong> and assign it the string value input. Output <code>str</code> in the console log.</p>
+        <input type="text" id="task8Input" placeholder="Enter string value here">
+        <button onclick="runTask8()">Run Task</button>
+        <div class="result" id="task8Result"></div>
+        <div class="resultE" id="task8ResultE"></div>
+    </div>
+
+    <div class="task">
+        <p><strong>Task 4:</strong> Create a constant <strong>const</strong> named <strong><code>constNum</code></strong> and assign it the integer value input. Try modifying <code>constNum</code> to trigger an error.</p>
+        <input type="text" id="task9Input" placeholder="Enter constant value here">
+        <input type="text" id="task99Input" placeholder="Enter different value here, blank to pass test">
+        <button onclick="runTask9()">Run Task</button>
+        <div class="result" id="task9Result"></div>
+        <div class="resultE" id="task9ResultE"></div>
+    </div>
+    
+    <div><h1>Array</h1></div>
+
+    <!-- Add to the end -->
+    <div class="task">
+        <p><strong>Task 5:</strong> Given <strong><code>myArray</code></strong> array :</p>
+        <p><strong>Add</strong> one item to the <strong>end</strong> of the array <code>myArray</code> e.g., <span style="color: green;">"apple"</span>.</p>
+        <input type="text" id="task20Input" placeholder="Enter your code here">
+        <button onclick="runTask20()">Run Task</button>
+        <div class="result" id="task20Result"></div>
+        <div class="resultE" id="task20ResultE"></div>
+    </div>
+
+    <!-- Add to the end -->
+    <div class="task">
+        <p><strong>Task 6:</strong> Given <strong><code>myArray</code></strong> array :</p>
+        <p><strong>Add</strong> one item to the <strong>end</strong> of the array <strong><code>myArray</code></strong> e.g., <span style="color:orange">"banana"</span>.</p>
+        <input type="text" id="task25Input" placeholder="Enter your code here">
+        <button onclick="runTask25()">Run Task</button>
+        <div class="result" id="task25Result"></div>
+        <div class="resultE" id="task25ResultE"></div>
+    </div>
+
+    <!-- Add to the beginning -->
+    <div class="task">
+        <p><strong>Task 7:</strong> Given <strong><code>myArray</code></strong> array :</p>
+        <p><strong>Add</strong> one item to the <strong>beginning</strong> of the array <strong><code>myArray</code></strong> e.g., <span style="color:rgb(247, 25, 9)">"watermelon"</span>.</p>
+        <input type="text" id="task30Input" placeholder="Enter your code here">
+        <button onclick="runTask30()">Run Task</button>
+        <div class="result" id="task30Result"></div>
+        <div class="resultE" id="task30ResultE"></div>
+    </div>
+
+
+    <!-- Add in position -->
+    <div class="task"></div>
+        <p><strong>Task 8:</strong> Given <strong><code>myArray</code></strong> array :</p>
+        <p><strong>Add</strong> the item <strong>"AMES"</strong> to the <strong>second</strong> position of <code>myArray</code>.</p>
+        <input type="text" id="task35Input" placeholder="Enter your code here">
+        <button onclick="runTask35()">Run Task</button>
+        <div class="result" id="task35Result"></div>
+        <div class="resultE" id="task35ResultE"></div>
+    </div>
+
+    <!-- Find item -->
+    <div class="task">
+        <p><strong>Task 9:</strong> Given <strong><code>myArray</code></strong> array :</p>
+        <p><strong>Find</strong> one item in the array <strong><code>myArray</code></strong> e.g., <span style="color:orange">"banana"</span>.</p>
+        <input type="text" id="task40Input" placeholder="Enter your code here">
+        <button onclick="runTask40()">Run Task</button>
+        <div class="result" id="task40Result"></div>
+        <div class="resultE" id="task40ResultE"></div>
+    </div>
+
+    <!-- Remove Last item -->
+    <div class="task">
+        <p><strong>Task 10:</strong> Given <strong><code>myArray</code></strong> array :</p>
+        <p><strong>Remove</strong> the <strong>last</strong> item from <strong><code>myArray</code></strong>.</p>
+        <input type="text" id="task80Input" placeholder="Enter your code here">
+        <button onclick="runTask80()">Run Task</button>
+        <div class="result" id="task80Result"></div>
+        <div class="resultE" id="task80ResultE"></div>
+    </div>
+
+
+    <!-- Remove First item -->
+    <div class="task">
+        <p><strong>Task 11:</strong> Given <strong><code>myArray</code></strong> array :</p>
+        <p><strong>Remove</strong> the <strong>first</strong> item from <strong><code>myArray</code></strong>.</p>
+        <input type="text" id="task85Input" placeholder="Enter your code here">
+        <button onclick="runTask85()">Run Task</button>
+        <div class="result" id="task85Result"></div>
+        <div class="resultE" id="task85ResultE"></div>
+    </div>
+    
+
+
+    <script src="./03_3_70_Activity06_In_class_Javascript_Variables_Array.js"></script>
+
+</body>
+</html>
