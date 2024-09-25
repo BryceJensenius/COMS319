@@ -1,7 +1,3 @@
-// Author: Bryce Jensenius
-// ISU Netid : brycejen@iastate.edu
-// Date : 09 / 9 / 2024
-
 function fetchData(){
     console.log("Beginning Fetch");
     fetch('./person.json')
@@ -39,3 +35,7 @@ function appendData(data) {
 }
 
 fetchData();
+
+// Author: Bryce Jensenius
+// ISU Netid : brycejen@iastate.edu
+// Date : 09 / 9 / 2024
