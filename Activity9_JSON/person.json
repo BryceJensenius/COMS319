@@ -1,0 +1,21 @@
+[{
+    "firstName": "Clark",
+    "lastName": "Kent",
+    "job": "Reporter",
+    "roll": 20,
+    "logo": "https://aaldacog.github.io/personal/05_3/Superman.png"
+},
+{
+    "firstName": "Bruce",
+    "lastName": "Wayne",
+    "job": "Rich Guy",
+    "roll": 40,
+    "logo": "https://aaldacog.github.io/personal/05_3/batman.jpg"
+},
+{
+    "firstName": "Peter",
+    "lastName": "Parker",
+    "job": "Student",
+    "roll": 50,
+    "logo": "https://aaldacog.github.io/personal/05_3/spiderman.png"
+}]

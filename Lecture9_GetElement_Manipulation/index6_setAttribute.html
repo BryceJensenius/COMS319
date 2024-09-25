@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Set Attribute</title>
+</head>
+<body>
+    <img id="myImage" src="https://www.nasa.gov/wp-content/uploads/2024/09/54005269263-3ec06fc827-o.jpg" width="350"
+alt="Placeholder Image" />
+<button id="changeSrcBtn">Change Image Source</button>
+<script>
+document.getElementById("changeSrcBtn").onclick = function () {
+document.getElementById("myImage").setAttribute("src", "https://www.nasa.gov/wp-content/uploads/2023/03/a15pan11845-7.jpg");
+}
+</script>
+</body>
+</html>

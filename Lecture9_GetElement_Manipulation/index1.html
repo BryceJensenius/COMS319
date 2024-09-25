@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Intro</title>
+</head>
+<body>
+    <h1 id="title">DOM Title</h1>
+    <p>First Element</p>
+    <p>Second Element</p>
+    <p>ThirdElement</p>
+
+    <script>
+        var myVariable = document.getElementById("title")
+        myVariable.style.display = "block";
+        myVariable.style.backgroundColor = "#f00";
+        myVariable.style.border = "solid 4px #00f";
+        myVariable.innerText = "New DOM Title";
+
+        // var myLinkCollection = document.getElementsByTagName("p");
+        // for(i = 0; i < myLinkCollection.length; i++){
+        //     myLinkCollection[i].onClick = function () {
+        //         this.style.color ="#FFF";
+        //         this.style.backgroundColor ="#00F";
+        //     }
+        // }
+        var myLinkCollection = document.getElementsByTagName("p");
+        for (i = 0; i < myLinkCollection.length; i++) {
+            myLinkCollection[i].onclick = function () {
+                this.style.color ="#FFF";
+                this.style.backgroundColor = "#00F";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="myImage" src="https://www.nasa.gov/wp-content/uploads/2024/09/54005269263-3ec06fc827-o.jpg" width="350" alt="Placeholder Image" />
+    <button id="getSrcBtn">Show Image Source</button>
+    <script>
+    document.getElementById("getSrcBtn").onclick = function () {
+        const imgElement = document.getElementById("myImage");
+        const imgSrc = imgElement.getAttribute("src");
+        alert("Image Source: " + imgSrc);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Remove children</title>
+</head>
+<body>
+    <ul id="todoList">
+        <li>Buy Groceries</li>
+        <li>Study JavaScript</li>
+        <li>Clean Room</li>
+    </ul>
+
+    <script>
+        var todoList = document.getElementById("todoList");
+        // Add event listener to remove a list item when clicked
+        todoList.addEventListener("click", function (event) {
+        var clickedItem = event.target;
+        todoList.removeChild(clickedItem); // Remove clicked item
+        });
+    </script>
+</body>
+</html>

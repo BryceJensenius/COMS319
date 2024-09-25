@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Create and Append Child</title>
+</head>
+<body>
+    <button id="addImageBtn">Add Image</button>
+    <div id="gallery"></div>
+
+    <script>
+        document.getElementById("addImageBtn").onclick = function () {
+        // Create a new image element
+        var newImage = document.createElement("img");
+        newImage.src = "https://upload.wikimedia.org/wikipedia/commons/e/ea/Superman_shield.svg";
+        newImage.alt = "Superman";
+        newImage.width = "100";
+        // Append the new image to the gallery div
+        document.getElementById("gallery").appendChild(newImage);
+        }
+        </script>
+</body>
+</html>

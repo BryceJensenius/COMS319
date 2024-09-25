@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Part 2</title>
+</head>
+<body>
+    <ul id="list">
+        <li> Product Number One </li>
+        <li> Product Number Two </li>
+        <li> Product Number Three</li>
+        <li> Product Number Four </li>
+    </ul>
+
+    <script>
+        var myLinkList = document.getElementById("list");
+        console.log("Number of children:", myLinkList.childElementCount);
+        alert(`Number of children: ${myLinkList.childElementCount}`);
+        for (let i = 0; i < myLinkList.childElementCount * 2; i++) {
+            console.log(myFirstProduct = myLinkList.childNodes[i].textContent);
+        }
+    </script>
+</body>
+</html>
