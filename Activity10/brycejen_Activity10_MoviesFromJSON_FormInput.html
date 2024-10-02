@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <title>Activity10 Movies From JSON</title>
+    </head>
+    <body>
+
+        <div style="position: absolute; top: 0; right: 0; padding: 10px;">
+            <p style="font-size: 10pt; font-family: 'Times New Roman'; text-align: left; margin: 0;">
+                <strong>Author</strong>: Bryce Jensenius <br>
+                <strong>Email</strong>: brycejen@iastate.edu<br>
+                <strong>Date</strong>: September 4th, 2024
+            </p>  
+        </div>
+        <br/>
+
+        <ul>
+            <li>Avengers</li>
+            <li>The Last Airbender</li>
+            <li>The Iron Giant</li>
+            <li>Mulan</li>
+            <li>Harry Potter</li>
+            <li>Maze Runner</li>
+        </ul>
+        <!-- Copy from Album - Bootstrap -->
+        <div class="album py-5 bg-body-tertiary">
+            <div class="container">
+                <div id="col" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+                </div>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <form id="my_form">
+            <label for="name">Movie name:</label>
+            <input type="text" id="selectedMovie" name="inputMovieName" value="Avengers">
+            <input type="submit" id="submitButton" name="submitButton" value="Submit">
+        </form>
+    </body>
+
+    <script src="./brycejen_Activity10_MoviesFromJSON_FormInput.js"></script>
+</html>
+
+<!-- Author: Bryce Jensenius
+    ISU Netid : brycejen@iastate.edu
+    Date : 10 / 02 / 2024 -->
