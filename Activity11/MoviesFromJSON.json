@@ -1,0 +1,58 @@
+{
+    "movies": [
+        {
+            "movieId": "1234",
+            "title": "Avengers",
+            "year": 2012,
+            "url": "https://freepngimg.com/thumb/avengers/5-2-avengers-png-picture.png",
+            "price": 100,
+            "description":"intrepid action drama suspense The movis is one of the best",
+            "color": "red"
+        },
+        {
+            "movieId": "A124",
+            "title": "The Last Airbender",
+            "year": 2005,
+            "url": "https://freepngimg.com/save/37589-aang-transparent-background/480x486",
+            "price": 50,
+            "description":"love fantasy action The movie is one of the best",
+            "color": "blue"
+        },
+        {
+            "movieId": "76788",
+            "title": "The Iron Giant",
+            "year": 1999,
+            "url": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/The_Iron_Giant_poster.JPG/220px-The_Iron_Giant_poster.JPG",
+            "price": 120,
+            "description":"love fantasy hero rural area town militar The movie is one of the best",
+            "color": "orange"
+        },
+        {
+            "movieId": "BB124",
+            "title": "Mulan",
+            "year": 1998,
+            "url": "https://freepngimg.com/thumb/disney/113364-picture-mulan-disney-free-photo.png",
+            "price": 85,
+            "description":"love fantasy hero china emperor",
+            "color": "green"
+        },
+        {
+            "movieId": "12345",
+            "title": "Harry Potter",
+            "year": 2001,
+            "url": "https://freepngimg.com/thumb/harry_potter/2-2-harry-potter-transparent.png",
+            "price": 90,
+            "description": "He's a wizard, wands, battle",
+            "color": "black"
+        },
+        {
+            "movieId": "12346",
+            "title": "Maze Runner",
+            "year": 2005,
+            "url": "./MyOwnImage/download.jpg",
+            "price": 45,
+            "description": "dystopian land of people trying to solve a maze",
+            "color": "brown"
+        }
+    ]
+}
