@@ -1,6 +1,6 @@
 document.getElementById('askButton').addEventListener('click', function() {
     const question = document.getElementById('question').value;
-    const apiKey = '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'; // Replace with your Hugging Face API token
+    const apiKey = ''; // Replace with your Hugging Face API token
     // GPT-2 model URL
     fetch('https://api-inference.huggingface.co/models/gpt2', {
             method: 'POST',
