@@ -1,3 +1,7 @@
+// Author: Bryce Jensenius
+// ISU Netid : brycejen@iastate.edu
+// Date : 10 / 25 / 2024
+
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, InputGroup, FormControl } from "react-bootstrap";
