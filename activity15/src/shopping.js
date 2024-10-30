@@ -13,15 +13,18 @@ const Shop = () => {
             setCatalog(data);
             console.log(data);
         };
+
         fetchData();
     },[]);
 
     useEffect(()=>{
         const total = () => {
             let totalAmount = 0;
+
             for (let i=0; i<cart.length; i++){
                 totalAmount += cart[i].price;
             }
+
             setCartTotal(totalAmount);
             console.log(totalAmount);
         };
@@ -34,6 +37,7 @@ const Shop = () => {
 
     const removeFromCart = (el) => {
         let itemFound = false;
+        
         const updatedCart = cart.filter((cartItem) => {
             if (cartItem.id === el.id && !itemFound) {
                 itemFound = true;

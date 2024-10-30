@@ -35,6 +35,7 @@ const Shop = () => {
     // removing, including fixing removing only one item from cart
     const removeFromCart = (el) => {
         let itemFound = false;
+        
         const updatedCart = cart.filter((cartItem) => {
             if (cartItem.id === el.id && !itemFound) {
                 itemFound = true;
@@ -42,6 +43,7 @@ const Shop = () => {
             }
             return true;
         });
+
         if (itemFound) {
             setCart(updatedCart);
         }
@@ -66,7 +68,6 @@ const Shop = () => {
         </div>
 
     ))
-
     return (
         <div> 
             {listItems} 
