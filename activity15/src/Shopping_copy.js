@@ -9,7 +9,6 @@ const Shop = () => {
     const fetchData = async () => {
         const someResponse = await fetch("./products.json");
             const data = await someResponse.json();
-            // update State Variable
             setCatalog(data);
             console.log(data);
         };
@@ -32,10 +31,9 @@ const Shop = () => {
         setCart([...cart, el]);
     };
 
-    // removing, including fixing removing only one item from cart
     const removeFromCart = (el) => {
         let itemFound = false;
-        
+
         const updatedCart = cart.filter((cartItem) => {
             if (cartItem.id === el.id && !itemFound) {
                 itemFound = true;
