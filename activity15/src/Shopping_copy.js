@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.css";
 
 const Shop = () => {
     const [catalog, setCatalog] = useState([]);
@@ -10,6 +9,7 @@ const Shop = () => {
     const fetchData = async () => {
         const someResponse = await fetch("./products.json");
             const data = await someResponse.json();
+            // update State Variable
             setCatalog(data);
             console.log(data);
         };
@@ -32,6 +32,7 @@ const Shop = () => {
         setCart([...cart, el]);
     };
 
+    // removing, including fixing removing only one item from cart
     const removeFromCart = (el) => {
         let itemFound = false;
         const updatedCart = cart.filter((cartItem) => {
@@ -46,62 +47,35 @@ const Shop = () => {
         }
     };
 
-    function howManyofThis(id) {
-        let hmot = cart.filter((cartItem) => cartItem.id === id);
-        return hmot.length;
-    }
-
-    const listItems = catalog.map((el) => (
-        <div class="row border-top border-bottom" key={el.id}>
-            <div class="row main align-items-center">
-                <div class="col-2">
-                    <img class="img-fluid" src={el.image} />
-                </div>
-                <div class="col">
-                    <div class="row text-muted">{el.title}</div>
-                    <div class="row">{el.category}</div>
-                </div>
-                <div class="col">
-                    <button type="button" variant="light" onClick={() => removeFromCart(el)} > - </button>{" "}
-                    <button type="button" variant="light" onClick={() => addToCart(el)}> + </button>
-                </div>
-                <div class="col">
-                    ${el.price} <span class="close">&#10005;</span>{howManyofThis(el.id)}
-                </div>
-            </div>
+    const cartItems = cart.map((el, index) => (
+        <div key={index}>
+            <img class="img-fluid" src={el.image} width={50} />
+            {el.title}
+            ${el.price}
         </div>
     ));
 
-    return (
-        <div>
-            STORE SE/ComS3190
-            <div class="card">
-                <div class="row">
-                    <div class="col-md-8 cart">
-                        <div class="title">
-                            <div class="row">
-                                <div class="col">
-                                    <h4>
-                                        <b>3190 Shopping Cart</b>
-                                    </h4>
-                                </div>
-                                <div class="col align-self-center text-right text-muted">
-                                    <h4>
-                                        <b>Products selected {cart.length}</b>
-                                    </h4>
-                                </div>
-                                <div class ="col align-self-center text-right text-muted">
-                                    <h4>
-                                        <b>Order total: ${cartTotal}</b>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div>{listItems}</div>
-                    </div>
-                </div>
-            </div>
+    const listItems = catalog.map((el) => (
+        <div key={el.id}>
+            <img class="img-fluid" src={el.image} width={100} />
+            {el.title}
+            {el.category}
+            {el.price}
+            <button type="button" onClick={() => removeFromCart(el)}> - </button>{" "}
+            <button type="button" variant="light" onClick={() => addToCart(el)}> + </button>
         </div>
-        );
-    };
+
+    ))
+
+    return (
+        <div> 
+            {listItems} 
+            <div>Items in Cart :</div>
+            <div>{cartItems}</div>
+            <div>Order total to pay: ${cartTotal}</div>
+        </div>
+
+    );
+}
+
 export default Shop;
