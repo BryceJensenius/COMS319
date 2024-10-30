@@ -41,6 +41,7 @@ const Shop = () => {
             }
             return true;
         });
+        
         if (itemFound) {
             setCart(updatedCart);
         }
@@ -71,7 +72,6 @@ const Shop = () => {
             </div>
         </div>
     ));
-
     return (
         <div>
             STORE SE/ComS3190
@@ -102,6 +102,6 @@ const Shop = () => {
                 </div>
             </div>
         </div>
-        );
-    };
+    );
+};
 export default Shop;
