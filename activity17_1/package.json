@@ -1,0 +1,20 @@
+{
+  "name": "express_request_methods",
+  "version": "1.0.0",
+  "description": "NodeJS and Express Request Methods",
+  "main": "brycejen_Activity17.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Nodejs",
+    "express"
+  ],
+  "author": "Bryce Jensenius",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.1"
+  }
+}
