@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="getRobots()" >Show All robots</button>
+    <d1 id="showRobots"></d1>
+
+    <script>
+        function getRobots(){
+            fetch('http://localhost:8081/listRobots')
+            .then(response => response.json())
+            .then(data => {
+                var container = document.getElementById("showRobots");
+                container.innerHTML = JSON.stringify(data, undefined, 2);
+            })
+        }
+    </script>
+</body>
+</html>

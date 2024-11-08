@@ -1,3 +1,7 @@
+// Bryce Jensenius
+// brycejen@iastate.edu
+// 11/8/24
+
 var express = require("express");
 var cors = require("cors");
 var fs = require("fs");
