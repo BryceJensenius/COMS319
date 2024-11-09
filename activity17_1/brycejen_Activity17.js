@@ -21,7 +21,7 @@ app.listen(port, () => {
 app.get("/listRobots", (req, res) => {
     fs.readFile(__dirname + "/" + "robots.json", "utf8", (err, data) => {
         console.log(data);
-        res.status(404);
+        res.status(200);
         res.send(data);
     });
 });
